@@ -17,13 +17,13 @@
 		#if ($enterprise == "true" || $enterprise == "y" || $enterprise ==
 		"yes" )
 		<!-- Spring version -->
-		<version.spring>3.1.1.RELEASE</version.spring>
+		<version.spring>3.2.2.RELEASE</version.spring>
 
 		<!-- Spring Third Party dependencies -->
 		<version.aopalliance>1.0</version.aopalliance>
 		#else
 		<!-- Spring version -->
-		<version.spring>3.1.1.RELEASE</version.spring>
+		<version.spring>3.2.2.RELEASE</version.spring>
 
 		<!-- Spring Third Party dependencies -->
 		<version.aopalliance>1.0</version.aopalliance>
@@ -44,21 +44,21 @@
 			#if ($enterprise == "true" || $enterprise == "y" || $enterprise ==
 			"yes" )
 			<!-- Define the versions of JBoss EAP components we want to use -->
-			<!-- Define the version of JBoss' Java EE 6 APIs we want to import. Any 
-				dependencies from org.jboss.spec will have their version defined by this 
+			<!-- Define the version of JBoss' Java EE 6 APIs we want to import. Any
+				dependencies from org.jboss.spec will have their version defined by this
 				BOM -->
-			<!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill 
-				of Materials (BOM). A BOM specifies the versions of a "stack" (or a collection) 
-				of artifacts. We use this here so that we always get the correct versions 
-				of artifacts. Here we use the jboss-javaee-web-6.0 stack (you can read this 
-				as the JBoss stack of the Java EE Web Profile 6 APIs), and we use version 
-				3.0.0.Final-redhat-1 which is the latest release of the stack. You can actually 
-				use this stack with any version of JBoss AS that implements Java EE 6, not 
+			<!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill
+				of Materials (BOM). A BOM specifies the versions of a "stack" (or a collection)
+				of artifacts. We use this here so that we always get the correct versions
+				of artifacts. Here we use the jboss-javaee-web-6.0 stack (you can read this
+				as the JBoss stack of the Java EE Web Profile 6 APIs), and we use version
+				3.0.0.Final-redhat-1 which is the latest release of the stack. You can actually
+				use this stack with any version of JBoss AS that implements Java EE 6, not
 				just JBoss AS 7! -->
 
 			<dependency>
 				<groupId>com.redhat.jboss.wfk.boms</groupId>
-				<artifactId>spring-3.1-bom</artifactId>
+				<artifactId>spring-3.2-bom</artifactId>
 				<type>pom</type>
 				<version>2.2.0-redhat-1</version>
 				<scope>import</scope>
@@ -67,22 +67,22 @@
 			<dependency>
 				<groupId>org.jboss.bom</groupId>
 				<artifactId>jboss-javaee-6.0-with-hibernate</artifactId>
-				<version>1.0.2.Final-redhat-1</version>
+				<version>1.0.4.Final-redhat-wfk-1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 
 			#else
-			<!-- Define the version of JBoss' Java EE 6 APIs we want to import. Any 
-				dependencies from org.jboss.spec will have their version defined by this 
+			<!-- Define the version of JBoss' Java EE 6 APIs we want to import. Any
+				dependencies from org.jboss.spec will have their version defined by this
 				BOM -->
-			<!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill 
-				of Materials (BOM). A BOM specifies the versions of a "stack" (or a collection) 
-				of artifacts. We use this here so that we always get the correct versions 
-				of artifacts. Here we use the jboss-javaee-web-6.0 stack (you can read this 
-				as the JBoss stack of the Java EE Web Profile 6 APIs), and we use version 
-				3.0.0.Final which is the latest release of the stack. You can actually use 
-				this stack with any version of JBoss AS that implements Java EE 6, not just 
+			<!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill
+				of Materials (BOM). A BOM specifies the versions of a "stack" (or a collection)
+				of artifacts. We use this here so that we always get the correct versions
+				of artifacts. Here we use the jboss-javaee-web-6.0 stack (you can read this
+				as the JBoss stack of the Java EE Web Profile 6 APIs), and we use version
+				3.0.0.Final which is the latest release of the stack. You can actually use
+				this stack with any version of JBoss AS that implements Java EE 6, not just
 				JBoss AS 7! -->
 			<dependency>
 				<groupId>org.jboss.bom</groupId>
@@ -96,11 +96,6 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
-				<version>${version.spring}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-asm</artifactId>
 				<version>${version.spring}</version>
 			</dependency>
 			<dependency>
@@ -227,10 +222,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-asm</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
